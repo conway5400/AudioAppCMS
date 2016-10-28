@@ -1,0 +1,62 @@
+body {
+    background: #f2f5f6;
+    background: -webkit-linear-gradient(-45deg, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+    background: -moz-linear-gradient(-45deg, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+    background: -o-linear-gradient(-45deg, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+    background: linear-gradient(-45deg, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=1 );
+    
+}
+
+.viewAlbumBtn {
+   margin: 10px; 
+}
+
+.albumArt, .artistPhoto {
+   padding: 10px; 
+}
+
+.album, .artist {
+    
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 25px;
+    background: #1e5799;
+    background: -webkit-linear-gradient(-45deg, #1e5799 0%, #2989d8 29%, #207cca 55%, #207cca 55%, #207cca 68%, #7db9e8 100%);
+    background: -moz-linear-gradient(-45deg, #1e5799 0%, #2989d8 29%, #207cca 55%, #207cca 55%, #207cca 68%, #7db9e8 100%);
+    background: -o-linear-gradient(-45deg, #1e5799 0%, #2989d8 29%, #207cca 55%, #207cca 55%, #207cca 68%, #7db9e8 100%);
+    background: linear-gradient(-45deg, #1e5799 0%, #2989d8 29%, #207cca 55%, #207cca 55%, #207cca 68%, #7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
+    
+}        
+
+.albumInfo, .artistInfo {
+    color: white;
+    padding: 2px 10px;
+}
+
+#tracksTable {
+    background-color: white;
+}
+
+.jumbotron .container {
+    max-width: 768px; 
+}
+
+
+.albumsContainer {
+    max-width: 768px;
+}
+
+.albumInfoJumbotron {
+    margin-bottom: 0px;
+}
+
+.jumbotron {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#largeAlbumImage {
+    max-height: 200px;
+}

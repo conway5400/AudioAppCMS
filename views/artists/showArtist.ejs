@@ -1,0 +1,38 @@
+<% include ../partials/header.ejs %>
+    <div id="albumInfoJumbotron" class="jumbotron">
+      <div class="albumsContainer container">
+        <div class="row">
+            <div class="col-md-3 col-xs-4">
+                <img id="largeAlbumImage" src="<%= artist.artistPhoto %>" class="img-responsive img-thumbnail">
+            </div>
+            <div class="col-md-9 col-xs-8">
+                <h3><%= artist.name %></h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <% artist.albums.forEach(function(album, index) { %>
+        
+            <% if(index % 4 == 0) { %>   <div class="clearfix visible-lg-block visible-md-block"></div> <% } %>
+            <% if(index % 2 == 0) { %>   <div class="clearfix visible-sm-block visible-xs-block"></div> <% } %>
+
+            <div class="col-md-3 col-xs-6">
+                <div class="album">
+                    <div class="albumArt">
+                        <img src="<%= album.albumArt %>" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="albumInfo">
+                        <h4><%= album.albumName %></h4>
+                        <p><%= album.artist.name %></p>
+                    </div>
+                    <p><a class="viewAlbumBtn btn btn-success center-block" href="/albums/<%= album._id %>" role="button">View Album</a></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,48 @@
+<% include ../partials/header.ejs %>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+            <h1>All Artists</h1>
+            <p>Find your artist below or click below to add a new one.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Add Artist</a></p>    
+        </div>
+        <div class="col-xs-6 col-lg-4">
+            <form action="/search" method="post">
+                <label>Query</label>
+                <input type="text" name="searchQuery">
+                <button>Search</button>
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+        <div class="row">
+        <% artists.forEach(function(artist, index) { %>
+        
+            <% if(index % 4 == 0) { %>   <div class="clearfix visible-lg-block visible-md-block"></div> <% } %>
+            <% if(index % 2 == 0) { %>   <div class="clearfix visible-sm-block visible-xs-block"></div> <% } %>
+
+            <div class="col-md-3 col-xs-6">
+                <div class="artist">
+                    <div class="artistPhoto">
+                        <img src="<%= artist.artistPhoto %>" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="artistInfo">
+                        <h4><%= artist.name %></h4>
+                    </div>
+                    <p><a class="viewAlbumBtn btn btn-success center-block" href="/artists/<%= artist._id %>" role="button">View Artist</a></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/allArtistsJS.js"></script>
+
+
+<% include ../partials/footer.ejs %>
