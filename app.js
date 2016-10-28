@@ -28,9 +28,6 @@ app.set("view engine", "ejs");
 app.use(methodOverride("_method"));    
 // app.use(fileUpload());
 
-//connect to database
-mongoose.connect("mongodb://localhost/audioapp");
-
 //routes
 app.use('/albums', albumRoutes);
 app.use('/api', apiRoutes);
